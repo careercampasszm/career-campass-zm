@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import {
   Briefcase,
@@ -6,6 +7,15 @@ import {
   Megaphone,
   ShieldCheck,
 } from "lucide-react";
+
+/* =========================
+   SEO METADATA (HOMEPAGE)
+========================= */
+export const metadata: Metadata = {
+  title: "Career Compass ZM | Strategic Career & Business Solutions in Zambia",
+  description:
+    "Career Compass ZM offers ATS CV writing, career coaching, business registration, compliance, branding, and technical services for professionals and organisations across Zambia.",
+};
 
 export default function Home() {
   return (
@@ -44,31 +54,31 @@ export default function Home() {
           <ServiceCard
             icon={<Briefcase size={32} />}
             title="Careers"
-            text="ATS CVs, interview coaching, profiling, recruitment support."
+            text="ATS CVs, interview coaching, profiling, and recruitment support."
           />
 
           <ServiceCard
             icon={<Building2 size={32} />}
             title="Business & Compliance"
-            text="PACRA, ZRA, Smart Invoice, statutory compliance."
+            text="PACRA, ZRA, Smart Invoice, and statutory compliance services."
           />
 
           <ServiceCard
             icon={<FileText size={32} />}
             title="Corporate Documentation"
-            text="Company profiles, proposals, and tenders."
+            text="Company profiles, business proposals, and tender documentation."
           />
 
           <ServiceCard
             icon={<Megaphone size={32} />}
             title="Branding & Advertising"
-            text="Visibility campaigns, social media, and print."
+            text="Visibility campaigns, social media management, and printing."
           />
 
           <ServiceCard
             icon={<ShieldCheck size={32} />}
             title="Technical Services"
-            text="CCTV, fire safety, and Starlink installation."
+            text="CCTV installation, fire safety services, and Starlink setup."
           />
         </div>
       </section>
@@ -76,6 +86,9 @@ export default function Home() {
   );
 }
 
+/* =========================
+   SERVICE CARD COMPONENT
+========================= */
 function ServiceCard({
   icon,
   title,
