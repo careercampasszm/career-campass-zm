@@ -15,9 +15,37 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Career Compass ZM",
-  description: "Strategic Career & Business Solutions",
+  title: "Career Compass ZM | Strategic Career & Business Solutions",
+  description:
+    "Career Compass ZM provides professional career services, business registration, compliance support, branding, and technical solutions across Zambia.",
+
+  openGraph: {
+    title: "Career Compass ZM",
+    description:
+      "Strategic career, business & compliance solutions for professionals and organisations in Zambia.",
+    url: "https://career-campass-zm-jy2x.vercel.app",
+    siteName: "Career Compass ZM",
+    images: [
+      {
+        url: "/images/hero/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Career Compass ZM – Strategic Career & Business Solutions",
+      },
+    ],
+    locale: "en_ZM",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Career Compass ZM",
+    description:
+      "Strategic career, business & compliance solutions for professionals and organisations in Zambia.",
+    images: ["/images/hero/hero.jpg"],
+  },
 };
+
 
 export default function RootLayout({
   children,
