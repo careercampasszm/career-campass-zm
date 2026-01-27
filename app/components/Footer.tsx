@@ -8,7 +8,7 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-white">
             Career Compass ZM
           </h3>
-          <p className="mt-3 text-sm">
+          <p className="mt-3 text-sm leading-relaxed">
             Strategic career, business & compliance solutions designed to
             position you for growth, credibility, and opportunity.
           </p>
@@ -16,17 +16,38 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-semibold text-white mb-3">Quick Links</h4>
+          <h4 className="font-semibold text-white mb-3">
+            Quick Links
+          </h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="/careers" className="hover:underline">Careers</a></li>
-            <li><a href="/business" className="hover:underline">Business & Compliance</a></li>
-            <li><a href="/contact" className="hover:underline">Contact</a></li>
+            <li>
+              <a href="/careers" className="hover:underline">
+                Careers
+              </a>
+            </li>
+            <li>
+              <a href="/business" className="hover:underline">
+                Business & Compliance
+              </a>
+            </li>
+            <li>
+              <a href="/technical" className="hover:underline">
+                Technical Services
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="hover:underline">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Social */}
         <div>
-          <h4 className="font-semibold text-white mb-3">Connect With Us</h4>
+          <h4 className="font-semibold text-white mb-3">
+            Connect With Us
+          </h4>
           <ul className="space-y-2 text-sm">
             <li>
               <a
@@ -72,7 +93,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-800 text-center py-4 text-sm">
+      {/* Copyright */}
+      <div className="border-t border-gray-800 text-center py-4 text-sm text-gray-400">
         © {new Date().getFullYear()} Career Compass ZM. All rights reserved.
       </div>
     </footer>

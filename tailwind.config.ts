@@ -9,11 +9,11 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          primary: "#0F2A44",     // Career Compass Navy
-          secondary: "#1F4ED8",   // Professional Blue
-          accent: "#0D9488",      // Guidance Teal
-          background: "#F8FAFC",  // Soft background
-          text: "#1F2937",        // Corporate text
+          primary: "#0F2A44",
+          secondary: "#1F4ED8",
+          accent: "#0D9488",
+          background: "#F8FAFC",
+          text: "#1F2937",
         },
       },
     },

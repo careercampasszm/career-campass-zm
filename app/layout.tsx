@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer"; // 👈 THIS LINE WAS MISSING
+import Footer from "./components/Footer";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,9 +17,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://career-campass-zm-jy2x.vercel.app"),
   title: "Career Compass ZM | Strategic Career & Business Solutions",
   description:
     "Career Compass ZM provides professional career services, business registration, compliance support, branding, and technical solutions across Zambia.",
+
+  // ✅ FAVICONS (make sure these files exist in /public)
+  // /public/icon.png
+  // /public/apple-icon.png
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico" }, // optional fallback if you have it
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png" }],
+  },
 
   openGraph: {
     title: "Career Compass ZM",
@@ -46,7 +60,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,19 +67,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-brand-background text-brand-text antialiased min-h-screen flex flex-col`}>
-        
-        {/* NAVBAR */}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} bg-brand-background text-brand-text antialiased min-h-screen flex flex-col`}
+      >
         <Navbar />
-
-        {/* PAGE CONTENT */}
-        <main className="pt-20 flex-grow">
-          {children}
-        </main>
-
-        {/* FOOTER */}
+        <main className="pt-20 flex-grow">{children}</main>
         <Footer />
-
+        <WhatsAppFloat />
       </body>
     </html>
   );
