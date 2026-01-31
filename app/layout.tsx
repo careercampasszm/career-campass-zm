@@ -17,38 +17,51 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://career-campass-zm-jy2x.vercel.app"),
-  title: "Career Compass ZM | Strategic Career & Business Solutions",
+  // ✅ IMPORTANT: Use your real domain (WhatsApp + Google previews depend on this)
+  metadataBase: new URL("https://www.careercampasszm.com"),
+
+  title: {
+    default: "Career Compass ZM",
+    template: "%s | Career Compass ZM",
+  },
+
   description:
     "Career Compass ZM provides professional career services, business registration, compliance support, branding, and technical solutions across Zambia.",
 
-  // ✅ FAVICONS (make sure these files exist in /public)
-  // /public/icon.png
-  // /public/apple-icon.png
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  // ✅ FAVICONS (ensure these exist in /public)
   icons: {
     icon: [
       { url: "/icon.png", type: "image/png" },
-      { url: "/favicon.ico" }, // optional fallback if you have it
+      { url: "/favicon.ico" },
     ],
     apple: [{ url: "/apple-icon.png", type: "image/png" }],
   },
 
   openGraph: {
+    type: "website",
+    url: "https://www.careercampasszm.com",
+    siteName: "Career Compass ZM",
     title: "Career Compass ZM",
     description:
       "Strategic career, business & compliance solutions for professionals and organisations in Zambia.",
-    url: "https://career-campass-zm-jy2x.vercel.app",
-    siteName: "Career Compass ZM",
     images: [
       {
-        url: "/images/hero/hero.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Career Compass ZM – Strategic Career & Business Solutions",
       },
     ],
     locale: "en_ZM",
-    type: "website",
   },
 
   twitter: {
@@ -56,7 +69,7 @@ export const metadata: Metadata = {
     title: "Career Compass ZM",
     description:
       "Strategic career, business & compliance solutions for professionals and organisations in Zambia.",
-    images: ["/images/hero/hero.jpg"],
+    images: ["/og-image.png"],
   },
 };
 
