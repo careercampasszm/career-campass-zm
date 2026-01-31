@@ -11,19 +11,18 @@ import {
 export default function HomePage() {
   return (
     <main className="relative">
-      {/* ================= HERO (FULL-BLEED, PREMIUM) ================= */}
+      {/* ================= HERO (FULL-BLEED, IMAGE-LED) ================= */}
       <section className="relative h-[78vh] md:h-[88vh] overflow-hidden">
-        {/* Full-bleed background image */}
+        {/* Full-bleed background image (leave image alone) */}
         <img
           src="/images/hero/hero-bg.jpg"
           alt="Career Compass ZM — professionals across careers, compliance, technical services, and agriculture"
           className="absolute inset-0 h-full w-full object-cover"
-          // Adjust this to control the crop focus (important!)
           style={{ objectPosition: "center 35%" }}
         />
 
-        {/* Subtle dark overlay to make button readable (NOT a big gradient panel) */}
-        <div className="absolute inset-0 bg-black/20" />
+        {/* Subtle readability overlay (charcoal tint, NOT heavy) */}
+        <div className="absolute inset-0 bg-[#0B1220]/20" />
 
         {/* Bottom-right single button */}
         <div className="relative z-10 h-full max-w-7xl mx-auto px-6">
@@ -31,7 +30,7 @@ export default function HomePage() {
             <a
               href="#positioning"
               className="inline-flex items-center justify-center rounded-full px-9 py-4 font-semibold
-                         bg-[#0F2A44]/85 text-white backdrop-blur-sm border border-white/20
+                         bg-[#0F2A44]/85 text-white backdrop-blur-sm border border-white/25
                          shadow-lg transition hover:bg-[#0F2A44] hover:shadow-xl"
             >
               Explore Services <span className="ml-2 text-[#D4AF37]">↓</span>
@@ -40,31 +39,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= POSITIONING (YOUR TEXT GOES HERE) ================= */}
+      {/* ================= POSITIONING (HEADINGS GOLD, BODY NAVY/CHARCOAL) ================= */}
       <section id="positioning" className="bg-white">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#0F2A44] text-center">
-            Strategic <span className="text-[#D4AF37]">Career</span> &{" "}
-            <span className="text-[#D4AF37]">Business</span> Solutions in Zambia
+          {/* Headline: keep wording, give it life (Gold + Navy) */}
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-center">
+            <span className="text-[#D4AF37]">Strategic Career</span>{" "}
+            <span className="text-[#0F2A44]">&amp; Business Solutions in Zambia</span>
           </h1>
 
-          <p className="mt-5 text-center text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Career Compass ZM helps professionals and organisations achieve
-            compliance, credibility, visibility, and sustainable growth — through
-            expert documentation, branding, technical services, and agriculture
-            consultancy.
+          {/* Supporting: navy/charcoal, not black */}
+          <p className="mt-5 text-center text-[#1F2937] max-w-3xl mx-auto leading-relaxed">
+            <span className="text-[#0F2A44] font-semibold">Career Compass ZM</span>{" "}
+            helps professionals and organisations achieve compliance, credibility,
+            visibility, and sustainable growth — through expert documentation,
+            branding, technical services, and agriculture consultancy.
           </p>
+
+          {/* subtle divider for premium spacing */}
+          <div className="mt-10 mx-auto h-px w-24 bg-[#D4AF37]/40" />
         </div>
       </section>
 
       {/* ================= SERVICES ================= */}
       <section id="services" className="bg-white">
         <div className="max-w-7xl mx-auto px-6 pb-20">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-center text-[#0F2A44]">
+          {/* Gold heading */}
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center text-[#D4AF37]">
             Our Core Services
           </h2>
 
-          <p className="mt-4 text-center text-gray-600 max-w-3xl mx-auto">
+          {/* Navy/charcoal subtext */}
+          <p className="mt-4 text-center text-[#0F2A44] max-w-3xl mx-auto">
             Choose a service area to learn more. Each category opens a full landing
             page with details, pricing, and next steps.
           </p>
@@ -115,15 +121,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= CTA (BETTER SCOPE LANGUAGE) ================= */}
-      <section className="bg-gray-50">
+      {/* ================= CTA (STRONGER, SCOPE-ACCURATE) ================= */}
+      <section className="bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="rounded-3xl bg-white border border-gray-200 p-10 md:p-14 text-center shadow-sm">
-            <h3 className="text-2xl md:text-3xl font-extrabold text-[#0F2A44]">
-              Get positioned for opportunity, compliance, and growth.
+            <h3 className="text-2xl md:text-3xl font-extrabold">
+              <span className="text-[#D4AF37]">Get positioned</span>{" "}
+              <span className="text-[#0F2A44]">for opportunity, compliance, and growth.</span>
             </h3>
 
-            <p className="mt-4 text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-4 text-[#1F2937] max-w-3xl mx-auto leading-relaxed">
               We support professionals with career documents and interview readiness,
               and help organisations with business registration, statutory compliance,
               corporate documentation, branding, and technical solutions — so your
@@ -169,9 +176,10 @@ function ServiceCard({
         {icon}
       </div>
 
-      <h3 className="text-xl font-bold text-[#0F2A44]">{title}</h3>
+      {/* Gold title, navy/charcoal body */}
+      <h3 className="text-xl font-extrabold text-[#D4AF37]">{title}</h3>
 
-      <p className="mt-3 text-gray-600 leading-relaxed">{text}</p>
+      <p className="mt-3 text-[#0F2A44] leading-relaxed">{text}</p>
 
       <p className="mt-4 text-sm font-semibold text-[#0F2A44] group-hover:text-[#D4AF37] transition">
         Explore →
